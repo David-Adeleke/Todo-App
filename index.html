@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Todo List</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Today's tasks</h1>
+      <p id="summary" class="summary" aria-live="polite"></p>
+    </header>
+
+    <form id="task-form" class="task-form">
+      <label for="task-input" class="visually-hidden">New task</label>
+      <input id="task-input" type="text" placeholder="What needs doing?" autocomplete="off" required>
+      <button type="submit">Add task</button>
+    </form>
+
+    <nav class="filters" aria-label="Filter tasks">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="done">Done</button>
+    </nav>
+
+    <ul id="task-list" class="task-list"></ul>
+    <p id="empty" class="empty" hidden>Nothing here yet. Add your first task above.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
